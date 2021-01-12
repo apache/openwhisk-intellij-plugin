@@ -28,7 +28,7 @@ github:
   - serverless-architectures
   - serverless-functions
   - dev-tools
-  - intellij-plugin]
+  - intellij-plugin
   protected_branches:
     master:
       required_status_checks:
