@@ -33,3 +33,6 @@ This extension finds the `.wskprops` configuration file located in the home path
 ```bash
 ./gradlew runIde
 ```
+
+
+test
