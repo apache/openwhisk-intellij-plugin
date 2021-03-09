@@ -117,7 +117,7 @@ public class WhiskPackageService {
         String endpoint = whiskAuth.getApihost() + "/api/v1/namespaces/_/packages/" + name + "?overwrite=false";
         String authorization = whiskAuth.getBasicAuthHeader();
         String body = JsonParserUtils.writeMapToJson(payload);
-        LOG.info("Package craeted: " + body);
+        LOG.info("Package created: " + body);
         HttpResponse response = Request.Put(endpoint)
                 .setHeader(HttpHeaders.AUTHORIZATION, authorization)
                 .bodyString(body, ContentType.APPLICATION_JSON)
