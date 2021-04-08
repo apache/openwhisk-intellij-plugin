@@ -50,7 +50,7 @@ public class TriggerManagerDialogForm {
     private static final String DEFAULT_RULE_TEXTAREA_MSG = "If not entered, it is automatically generated.";
 
     private JPanel mainJPanel;
-    private JPanel tirggerNameJPanel;
+    private JPanel triggerNameJPanel;
     private JPanel triggerActionsJPanel;
     private JLabel triggerNameJLabel;
 
