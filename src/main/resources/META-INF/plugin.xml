@@ -1,7 +1,7 @@
-<idea-plugin>
+<idea-plugin url="https://github.com/apache/openwhisk-intellij-plugin">
     <id>org.apache.openwhisk.intellij</id>
-    <name>DevTools for Apache Openwhisk</name>
-    <vendor email="dev@openwhisk.apache.org" url="https://github.com/apache">Apache</vendor>
+    <name>Apache OpenWhisk</name>
+    <vendor email="dev@openwhisk.apache.org" url="https://openwhisk.apache.org/">Apache OpenWhisk</vendor>
     <version>1.0.0</version>
     <idea-version since-build="191.*" until-build="211.*"/>
 
