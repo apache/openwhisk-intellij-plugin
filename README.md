@@ -25,7 +25,7 @@ Install the dependencies below to use full features:
 * Intellij >= 2018.1.8
 * [wskdeploy](https://github.com/apache/openwhisk-wskdeploy/releases)
 
-This extension finds the `.wskprops` configuration file located in the home path and connects to the Openwhisk server automatically. Set up your configuration referred to the [cli docs](https://github.com/apache/openwhisk/blob/master/docs/cli.md#openwhisk-cli).
+This extension finds the `.wskprops` configuration file located in the home path and connects to the OpenWhisk server automatically. Set up your configuration referred to the [cli docs](https://github.com/apache/openwhisk/blob/master/docs/cli.md#openwhisk-cli).
 
 ## Feature
 ### OpenWhisk Explorer
