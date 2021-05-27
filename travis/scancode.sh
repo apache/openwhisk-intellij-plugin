@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE file distributed with
@@ -15,29 +17,23 @@
 # limitations under the License.
 #
 
-name: Java CI with Gradle
+set -e
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+SCRIPTDIR=$(cd $(dirname "$0") && pwd)
+ROOTDIR="$SCRIPTDIR/../"
+HOMEDIR="$SCRIPTDIR/../../"
+UTIL_DIR="$HOMEDIR/openwhisk-utilities"
 
-jobs:
-  build:
+# clone OpenWhisk utilities repo. in order to run scanCode.py
+cd $HOMEDIR
 
-    runs-on: ubuntu-latest
+if [ ! -d "openwhisk-utilities" ] ; then
+    git clone https://github.com/apache/openwhisk-utilities.git
+else
+    cd "openwhisk-utilities"
+    git pull
+fi
 
-    steps:
-      - uses: actions/checkout@v2.3.4
-      - name: Set up JDK 11
-        uses: actions/setup-java@v1
-        with:
-          java-version: 11
-      - name: Run scancode
-        run: |
-            ./travis/scancode.sh
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-      - name: Build with Gradle
-        run: ./gradlew build
+# run scancode
+cd $UTIL_DIR
+scancode/scanCode.py --config scancode/ASF-Release.cfg $ROOTDIR
