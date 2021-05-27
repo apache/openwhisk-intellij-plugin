@@ -17,7 +17,6 @@
 
 package org.apache.openwhisk.intellij.wskdeploy.toolwindow.action;
 
-import com.intellij.icons.AllIcons;
 import com.intellij.notification.NotificationType;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -39,6 +38,8 @@ import org.jetbrains.annotations.NotNull;
 import java.io.IOException;
 import java.util.Arrays;
 
+import static org.apache.openwhisk.intellij.common.Icons.MENU_PASTE;
+
 public class CreateManifestTemplateAction extends AnAction {
     private static final Logger LOG = Logger.getInstance(CreateManifestTemplateAction.class);
     private static final SimpleNotifier NOTIFIER = SimpleNotifier.getInstance();
@@ -47,7 +48,7 @@ public class CreateManifestTemplateAction extends AnAction {
     private static final String[] SOURCE_FILES = new String[]{"index.js", "index.test.js", "package.json"};
 
     CreateManifestTemplateAction() {
-        super(AllIcons.Actions.Menu_paste);
+        super(MENU_PASTE);
     }
 
     @Override
